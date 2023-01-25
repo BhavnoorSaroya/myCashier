@@ -1,80 +1,12 @@
 #currently weather remains experimental, but this comment will be updated accordingly when weather enters into the alpha stage
 
-####ATTENTION Weather is now in alpha*******************
+#ATTENTION Weather is now in alpha
 
-####ATTENTION Weather has entered beta phase
+#ATTENTION Weather has entered beta phase
 
-############We are pleased to release weather module v1
-
-
+#We are pleased to release weather module v1
 
 
-
-
-
-#import requests
-
-#all of the below was from google, it doesnt really work, so i left it here to refer to, its not even that helpful
-"""
-city_name = "Vancouver"
-api_key = "a87d5e24ba113d24c19a7d97ed3213b7"#typing an api key directly into a public replit is a bad idea for so many reasons, yet here I am doing it anyway. 
-
-def get_weather(api_key, city, tempstate):
-
-		
-	
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
-
-    response = requests.get(url).json()
-
-    temp = response['main']['temp']
-    #temp = math.floor((temp * 1.8) - 459.67)  # Convert to °F
-		
-		
-    feels_like = response['main']['feels_like']
-    #feels_like = math.floor((feels_like * 1.8) - 459.67)  # Convert to °F
-		#for temp in celcius all we need to do is subtract 273.15 
-    humidity = response['main']['humidity']
-		
-	
-    return {
-        'temp': temp,
-        'feels_like': feels_like,
-        'humidity': humidity
-    }
-
-
-weather = get_weather(api_key, city_name, f)
-
-#root = Tk()
-#root.geometry("600x300")
-#root.title(f'{city_name} Weather')
-
-#def display_city_name(city):
-#    city_label = Label(root, text=f"{city_name}")
-    
-#    city_label.pack(side='top')
-
-#def display_stats(weather):
-#    temp = Label(root, text=f"Temperature: {weather['temp']} K")
-#    feels_like = Label(root, text=f"Feels Like: {weather['feels_like']}K")
-#    humidity = Label(root, text=f"Humidity: {weather['humidity']} %")
-
-  
-#    temp.pack(side='top')
-#    feels_like.pack(side='top')
-#    humidity.pack(side='top')
-
-
-#display_city_name(city_name)
-#display_stats(weather)
-
-#mainloop()
-
-"""
-
-
-#real weather function for final use, now in beta stage
 
 def weather(tempstate="C", city="Nanaimo"):
 	import requests
@@ -96,17 +28,12 @@ def weather(tempstate="C", city="Nanaimo"):
 		#too bad he can't spell
 	else: print("Invalid temperature unit passed, and no, Farenheit is not a valid temperature unit. For users that disagree, we recommend the guilotine. ")
 
-	api_key = "a87d5e24ba113d24c19a7d97ed3213b7"#typing an api key directly into a public replit is a bad idea for 	so many reasons, yet here I am doing it anyway. 
-	#												
-	#										 ^
-	#					 API KEY RIGHT HERE / \
-	#										 |
-	#										 |      USE IT RESPONSIBLY
-	#										 |
+	api_key = "a87d5e24ba113d24c19a7d97ed3213b7" # this is a public key and that is why it is left in a public repo
+	
 
 	url= f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"#here is the url that we can ping a maximum of once every hour I believe, if we pay for openweathermap it would be more than that. 
 
-	response = requests.get(url).json()#THIS LINE IS ENTIRELY MAGIC, NOBODY REALLY KNOWS WHAT IT DOES, BUT STUFF DONT WORK IF WE REMOVE IT
+	response = requests.get(url).json()
 	
 	# the city was not found
 	if response["cod"] == 404:
@@ -149,9 +76,6 @@ def weather(tempstate="C", city="Nanaimo"):
 
 
 
-#For the record no body in this group actually speaks chinese so I am not sure how or why this is here. 
-#def 哔哔生菜():
-#	raise 哔哔生菜
 
 
 
